@@ -10,15 +10,10 @@
 
   <style>
     .max-width {
-
       max-width: 100%;
-
       width: 100%;
-
       display: block;
-
       margin: 0 auto;
-
     }
 
     .ancla-spp {
@@ -92,6 +87,8 @@
 
   .videos-container {
     display: flex;
+    position: relative;
+    width: 100%;
     justify-content: center;
     margin-top: 30px;
     gap: 30px;
@@ -107,11 +104,6 @@
     transition: all 0.3s ease;
   }
 
-  .card img {
-    width: 100%;
-    border-radius: 14.78px 14.78px 0px 0px;
-  }
-
   .grooming-salon-videos-header{
     font-size: 18px;
     font-weight: 700;
@@ -122,6 +114,39 @@
     padding: 25px 35px;
     text-align: justify;
     font-size: 16px;
+  }
+
+  /* Estilos para los videos */
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  .play-button {
+    position: absolute;
+    bottom: -23px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 4.95px 4.95px rgba(0, 0, 0, 0.08);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .play-button img {
+    width: 35px;
+    height: 35px;
+    border-radius: 0;
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 14.78px 14.78px 0px 0px;
   }
 
   /* Estilos para móviles */
@@ -3058,33 +3083,44 @@
       <div class="videos-container">
         <!-- Card 1 -->
         <div class="card">
-          <img src="https://www.petco.com.mx/medias/video-1-desk-2025.webp?context=bWFzdGVyfGV2ZW50b3MyMDI1fDIwNDI0fGltYWdlL3dlYnB8YURZM0wyaGtNaTh4TVRFNE5qUTJORFF5TXprMk5pOTJhV1JsYjE4eFgyUmxjMnRmTWpBeU5TNTNaV0p3fDhjMzEwNzBhNzkzNTY0YTk5MTVmYzE1OTA0MGMwZDEyYmM2YjFjYWY2MDY3ZjNiMmQ4Y2IyYjc3NzEzMjhhN2U" alt="Perrito feliz después del baño">
+          <div class="video-wrapper">
+            <img src="https://www.petco.com.mx/medias/video-1-desk-2025.webp?context=bWFzdGVyfGV2ZW50b3MyMDI1fDIwNDI0fGltYWdlL3dlYnB8YURZM0wyaGtNaTh4TVRFNE5qUTJORFF5TXprMk5pOTJhV1JsYjE4eFgyUmxjMnRmTWpBeU5TNTNaV0p3fDhjMzEwNzBhNzkzNTY0YTk5MTVmYzE1OTA0MGMwZDEyYmM2YjFjYWY2MDY3ZjNiMmQ4Y2IyYjc3NzEzMjhhN2U" alt="Perrito feliz después del baño">
+            <div class="play-button" onclick="playVideo()">
+              <img src="https://www.petco.com.mx/medias/play-2025.svg?context=bWFzdGVyfGV2ZW50b3MyMDI1fDY4NXxpbWFnZS9zdmcreG1sfGFERmhMMmhqTVM4eE1URTROalEyTkRrME9ESTFOQzl3YkdGNVh6SXdNalV1YzNabnw3MDQ2YTE1OWJmZjE2ZjA1OTk5NzBjMDkxM2EyMjNkYWE3ZjA4MjQ0ODc5YzM5YjA5ZGMyMDY2NGYxNTc2YTNk" alt="Play">
+            </div>
+          </div>
           <div class="videos-caja-text">
             <h2 class="grooming-salon-videos-header">Petco Grooming Salon</h2>
             <p>Nada como ver a tu perrito feliz después de un baño. En Petco Grooming Salon lo consentimos con baños, shampoos naturales, corte de pelo y corte de uñas de estilistas certificados.</p>
-            <!-- <div class="play-icon">▶️</div> -->
-            <div class="play-button" onclick="playVideo()"><img src="https://www.petco.com.mx/medias/play-2025.svg?context=bWFzdGVyfGV2ZW50b3MyMDI1fDY4NXxpbWFnZS9zdmcreG1sfGFERmhMMmhqTVM4eE1URTROalEyTkRrME9ESTFOQzl3YkdGNVh6SXdNalV1YzNabnw3MDQ2YTE1OWJmZjE2ZjA1OTk5NzBjMDkxM2EyMjNkYWE3ZjA4MjQ0ODc5YzM5YjA5ZGMyMDY2NGYxNTc2YTNk" alt=""></div>
           </div>
         </div>
 
 
         <!-- Card 2 -->
         <div class="card">
-          <img src="https://www.petco.com.mx/medias/video-2-desk-2025.webp?context=bWFzdGVyfGV2ZW50b3MyMDI1fDIxMzA2fGltYWdlL3dlYnB8YUdJNUwyaGtNUzh4TVRFNE5qUTJORFE0T1RVd01pOTJhV1JsYjE4eVgyUmxjMnRmTWpBeU5TNTNaV0p3fDM0NmI1MTg2NzUwNDNiNzE2MjE5OTg4NTQzNzA1NDg0ODk1NjcyMGFjNmM2NzRiZTI4NmRhOWQ5ZjdiNTM3MzA" alt="Proceso de grooming">
+          <div class="video-wrapper">
+            <img src="https://www.petco.com.mx/medias/video-2-desk-2025.webp?context=bWFzdGVyfGV2ZW50b3MyMDI1fDIxMzA2fGltYWdlL3dlYnB8YUdJNUwyaGtNUzh4TVRFNE5qUTJORFE0T1RVd01pOTJhV1JsYjE4eVgyUmxjMnRmTWpBeU5TNTNaV0p3fDM0NmI1MTg2NzUwNDNiNzE2MjE5OTg4NTQzNzA1NDg0ODk1NjcyMGFjNmM2NzRiZTI4NmRhOWQ5ZjdiNTM3MzA" alt="Proceso de grooming">
+            <div class="play-button" onclick="playVideo()">
+              <img src="https://www.petco.com.mx/medias/play-2025.svg?context=bWFzdGVyfGV2ZW50b3MyMDI1fDY4NXxpbWFnZS9zdmcreG1sfGFERmhMMmhqTVM4eE1URTROalEyTkRrME9ESTFOQzl3YkdGNVh6SXdNalV1YzNabnw3MDQ2YTE1OWJmZjE2ZjA1OTk5NzBjMDkxM2EyMjNkYWE3ZjA4MjQ0ODc5YzM5YjA5ZGMyMDY2NGYxNTc2YTNk" alt="Play">
+            </div>
+          </div>
           <div class="videos-caja-text">
             <h2 class="grooming-salon-videos-header">El proceso de Petco Grooming Salon</h2>
             <p>Te explicamos paso a paso cómo es el proceso de baño, corte de pelo, corte de uñas, limpieza de oídos y muchas caricias.</p>
-            <div class="play-button" onclick="playVideo()"><img src="https://www.petco.com.mx/medias/play-2025.svg?context=bWFzdGVyfGV2ZW50b3MyMDI1fDY4NXxpbWFnZS9zdmcreG1sfGFERmhMMmhqTVM4eE1URTROalEyTkRrME9ESTFOQzl3YkdGNVh6SXdNalV1YzNabnw3MDQ2YTE1OWJmZjE2ZjA1OTk5NzBjMDkxM2EyMjNkYWE3ZjA4MjQ0ODc5YzM5YjA5ZGMyMDY2NGYxNTc2YTNk" alt=""></div>
           </div>
         </div>
 
         <!-- Card 3 -->
         <div class="card">
-          <img src="https://www.petco.com.mx/medias/video-3-desk-2025.webp?context=bWFzdGVyfGV2ZW50b3MyMDI1fDUwNDI2fGltYWdlL3dlYnB8YUdFM0wyaGpaUzh4TVRFNE5qUTJORFUxTlRBek9DOTJhV1JsYjE4elgyUmxjMnRmTWpBeU5TNTNaV0p3fDYwZjIyNzg2ZGIzMmU1NjA2YzRiNzMzNDQ3MDc2MWY3YzFmNGU4ZDQwNWQ5MGM5M2Y4YWRjOTg0ZjQ5OTQzZGE" alt="Cartilla de vacunación">
+          <div class="video-wrapper">
+            <img src="https://www.petco.com.mx/medias/video-3-desk-2025.webp?context=bWFzdGVyfGV2ZW50b3MyMDI1fDUwNDI2fGltYWdlL3dlYnB8YUdFM0wyaGpaUzh4TVRFNE5qUTJORFUxTlRBek9DOTJhV1JsYjE4elgyUmxjMnRmTWpBeU5TNTNaV0p3fDYwZjIyNzg2ZGIzMmU1NjA2YzRiNzMzNDQ3MDc2MWY3YzFmNGU4ZDQwNWQ5MGM5M2Y4YWRjOTg0ZjQ5OTQzZGE" alt="Cartilla de vacunación">
+            <div class="play-button" onclick="playVideo()">
+              <img src="https://www.petco.com.mx/medias/play-2025.svg?context=bWFzdGVyfGV2ZW50b3MyMDI1fDY4NXxpbWFnZS9zdmcreG1sfGFERmhMMmhqTVM4eE1URTROalEyTkRrME9ESTFOQzl3YkdGNVh6SXdNalV1YzNabnw3MDQ2YTE1OWJmZjE2ZjA1OTk5NzBjMDkxM2EyMjNkYWE3ZjA4MjQ0ODc5YzM5YjA5ZGMyMDY2NGYxNTc2YTNk" alt="Play">
+            </div>
+          </div>
           <div class="videos-caja-text">
             <h2 class="grooming-salon-videos-header">La importancia de la Cartilla de Vacunación</h2>
             <p>La cartilla de vacunación es un documento importante para la salud de tu perrito. Te explicamos cómo leerla, qué vacunas debe tener y cuál es la frecuencia ideal para aplicarlas.</p>
-            <div class="play-button" onclick="playVideo()"><img src="https://www.petco.com.mx/medias/play-2025.svg?context=bWFzdGVyfGV2ZW50b3MyMDI1fDY4NXxpbWFnZS9zdmcreG1sfGFERmhMMmhqTVM4eE1URTROalEyTkRrME9ESTFOQzl3YkdGNVh6SXdNalV1YzNabnw3MDQ2YTE1OWJmZjE2ZjA1OTk5NzBjMDkxM2EyMjNkYWE3ZjA4MjQ0ODc5YzM5YjA5ZGMyMDY2NGYxNTc2YTNk" alt=""></div>
           </div>
         </div>
       </div>
