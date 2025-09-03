@@ -3085,7 +3085,7 @@
         <div class="card">
           <div class="video-wrapper">
             <img src="https://www.petco.com.mx/medias/video-1-desk-2025.webp?context=bWFzdGVyfGV2ZW50b3MyMDI1fDIwNDI0fGltYWdlL3dlYnB8YURZM0wyaGtNaTh4TVRFNE5qUTJORFF5TXprMk5pOTJhV1JsYjE4eFgyUmxjMnRmTWpBeU5TNTNaV0p3fDhjMzEwNzBhNzkzNTY0YTk5MTVmYzE1OTA0MGMwZDEyYmM2YjFjYWY2MDY3ZjNiMmQ4Y2IyYjc3NzEzMjhhN2U" alt="Perrito feliz después del baño">
-            <div class="play-button" onclick="playVideo()">
+            <div class="play-button" onclick="playVideo(0); event.stopPropagation();">
               <img src="https://www.petco.com.mx/medias/play-2025.svg?context=bWFzdGVyfGV2ZW50b3MyMDI1fDY4NXxpbWFnZS9zdmcreG1sfGFERmhMMmhqTVM4eE1URTROalEyTkRrME9ESTFOQzl3YkdGNVh6SXdNalV1YzNabnw3MDQ2YTE1OWJmZjE2ZjA1OTk5NzBjMDkxM2EyMjNkYWE3ZjA4MjQ0ODc5YzM5YjA5ZGMyMDY2NGYxNTc2YTNk" alt="Play">
             </div>
           </div>
@@ -3100,7 +3100,7 @@
         <div class="card">
           <div class="video-wrapper">
             <img src="https://www.petco.com.mx/medias/video-2-desk-2025.webp?context=bWFzdGVyfGV2ZW50b3MyMDI1fDIxMzA2fGltYWdlL3dlYnB8YUdJNUwyaGtNUzh4TVRFNE5qUTJORFE0T1RVd01pOTJhV1JsYjE4eVgyUmxjMnRmTWpBeU5TNTNaV0p3fDM0NmI1MTg2NzUwNDNiNzE2MjE5OTg4NTQzNzA1NDg0ODk1NjcyMGFjNmM2NzRiZTI4NmRhOWQ5ZjdiNTM3MzA" alt="Proceso de grooming">
-            <div class="play-button" onclick="playVideo()">
+            <div class="play-button" onclick="playVideo(1); event.stopPropagation();">
               <img src="https://www.petco.com.mx/medias/play-2025.svg?context=bWFzdGVyfGV2ZW50b3MyMDI1fDY4NXxpbWFnZS9zdmcreG1sfGFERmhMMmhqTVM4eE1URTROalEyTkRrME9ESTFOQzl3YkdGNVh6SXdNalV1YzNabnw3MDQ2YTE1OWJmZjE2ZjA1OTk5NzBjMDkxM2EyMjNkYWE3ZjA4MjQ0ODc5YzM5YjA5ZGMyMDY2NGYxNTc2YTNk" alt="Play">
             </div>
           </div>
@@ -3114,7 +3114,7 @@
         <div class="card">
           <div class="video-wrapper">
             <img src="https://www.petco.com.mx/medias/video-3-desk-2025.webp?context=bWFzdGVyfGV2ZW50b3MyMDI1fDUwNDI2fGltYWdlL3dlYnB8YUdFM0wyaGpaUzh4TVRFNE5qUTJORFUxTlRBek9DOTJhV1JsYjE4elgyUmxjMnRmTWpBeU5TNTNaV0p3fDYwZjIyNzg2ZGIzMmU1NjA2YzRiNzMzNDQ3MDc2MWY3YzFmNGU4ZDQwNWQ5MGM5M2Y4YWRjOTg0ZjQ5OTQzZGE" alt="Cartilla de vacunación">
-            <div class="play-button" onclick="playVideo()">
+            <div class="play-button" onclick="playVideo(2); event.stopPropagation();">
               <img src="https://www.petco.com.mx/medias/play-2025.svg?context=bWFzdGVyfGV2ZW50b3MyMDI1fDY4NXxpbWFnZS9zdmcreG1sfGFERmhMMmhqTVM4eE1URTROalEyTkRrME9ESTFOQzl3YkdGNVh6SXdNalV1YzNabnw3MDQ2YTE1OWJmZjE2ZjA1OTk5NzBjMDkxM2EyMjNkYWE3ZjA4MjQ0ODc5YzM5YjA5ZGMyMDY2NGYxNTc2YTNk" alt="Play">
             </div>
           </div>
@@ -3430,7 +3430,71 @@
       document.getElementById("adicionales").classList.add("grooming-landing-servicios-spa-toggle-text-no-select");
     }
 
+  function playVideo(index) {
+    const videoModal = document.getElementById('videoModal');
+    const videoContainer = document.getElementById('videoContainer');
+    
+    if (!videoModal || !videoContainer) {
+      console.error('Modal elements not found');
+      return;
+    }
+    
+    const videoSources = [
+      // Video 1: "Petco Grooming Salon"
+      '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1114966078?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Petco Grooming Salon"></iframe></div><script src="https://player.vimeo.com/api/player.js"><\/script>',
+      
+      // Video 2: "El proceso de Petco Grooming Salon"
+      '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1114996287?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="El proceso de Petco Grooming Salon"></iframe></div><script src="https://player.vimeo.com/api/player.js"><\/script>',
+      
+      // Video 3: "La importancia de la Cartilla de Vacunación"
+      '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1114998539?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="La importancia de la Cartilla de Vacunación"></iframe></div><script src="https://player.vimeo.com/api/player.js"><\/script>'
+    ];
+    
+    videoContainer.innerHTML = videoSources[index];
+    videoModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
 
+  // Esperar a que el DOM esté completamente cargado
+  document.addEventListener('DOMContentLoaded', function() {
+    const closeBtn = document.getElementById('closeModal');
+    const videoModal = document.getElementById('videoModal');
+    
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function() {
+        if (videoModal) {
+          videoModal.style.display = 'none';
+          document.getElementById('videoContainer').innerHTML = '';
+          document.body.style.overflow = 'auto';
+        }
+      });
+    }
+    
+    if (videoModal) {
+      videoModal.addEventListener('click', function(event) {
+        // Corregir la comparación - usar event.target en lugar de this
+        if (event.target === videoModal) {
+          videoModal.style.display = 'none';
+          document.getElementById('videoContainer').innerHTML = '';
+          document.body.style.overflow = 'auto';
+        }
+      });
+    }
+    
+    // Hacer clickeables las cards
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card, index) => {
+      card.style.cursor = 'pointer';
+      
+      card.addEventListener('click', function() {
+        playVideo(index);
+      });
+    });
+  });
   </script>
 
+<div id="videoModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 1000; justify-content: center; align-items: center;">
+  <span id="closeModal" style="position: absolute; top: 20px; right: 30px; font-size: 36px; font-weight: bold; color: white; cursor: pointer; z-index: 1001;">&times;</span>
+  <div id="videoContainer" style="width: 80%; max-width: 900px; overflow: hidden;"></div>
+</div>
 </body>
